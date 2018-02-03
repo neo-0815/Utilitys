@@ -1,0 +1,148 @@
+name: Utilitys
+version: Alpha 1.0
+main: me.neo_0815.utilitys.Utilitys
+description: Ein Utility-Plugin
+author: neo_0815
+
+commands:
+     saveinv:
+          description: Sichert dein Inventar.
+          usage: /saveinv
+          aliases: [saveInv]
+     loadinv:
+          description: Gibt dir dein Inventar.
+          usage: /loadinv
+          aliases: [loadInv]
+     invsee:
+          description: Zeigt dir das Inventar des gegebenen Spielers.
+          usage: /invsee <player>
+          aliases: [seeinv, seeInv]
+     back:
+          description: Teleportiert dich zu deinem letzten Todespunkt.
+          usage: /back
+     warp:
+          description: Listet die /warp Befehle auf.
+          usage: /warp <[<set> <name>] [<delete> <name>] [<name>]>
+     home:
+          usage: /home [ [<set> <name>] [<delete> <name>] [<name>] ]
+     money:
+          usage: /money [ [<set> <amount>] [<add> <amount>] [<remove> <amount>] [<reset>] ]
+     tpa:
+          description: Schickt eine Teleportationsanfrage zu dem angegebenen Spieler.
+          usage: /tpa <player>
+     tpaccept:
+          description: Nimmt die offene Teleportationsanfrage an.
+          usage: /tpaccept
+     tpall:
+          description: Teleportiert alle Spieler zu dir.
+          usage: /tpall
+     hat:
+          description:
+          usage: /hat
+     nick:
+          description: Nickt dich.
+          usage: /nick <nickname>
+     pets:
+          description: Macht das Pets-Inventar auf.
+          usage: /pets
+          
+permissions:
+     utilitys.*:
+          description: Gibt alle Berechtigungen fuer das Plugin.
+          children:
+               utilitys.inv.*: true
+               utilitys.back: true
+               utilitys.warp.*: true
+               utilitys.home.*: true
+               utilitys.money.*: true
+               utilitys.hat: true
+               utilitys.nick: true
+               utilitys.seat: true
+               utilitys.pets: true
+     utilitys.inv.*:
+          description: Gibt alle Berechtigungen fuer die Inventar bezogenen Kommandos.
+          children:
+               utilitys.inv.save: true
+               utilitys.inv.load: true
+               utilitys.inv.see: true
+               utilitys.inv.edit: true
+     utilitys.inv.save:
+          description: Erlaubt den /saveinv Befehl.
+          default: true
+     utilitys.inv.load:
+          description: Erlaubt den /loadinv Befehl.
+     utilitys.inv.see:
+          description: Erlaubt den /invsee Befehl.
+     utilitys.inv.edit:
+          description: Erlaubt des aufgerufene Inventar zu editieren.
+     utilitys.back:
+          description: Erlaubt den /back Befehl.
+     utilitys.warp.*:
+          description: Gibt alle Berechtigungen fuer die Warp bezogenen Kommandos.
+          children:
+               utilitys.warp.set: true
+               utilitys.warp.delete: true
+               utilitys.warp.warp: true
+     utilitys.warp.set:
+          description: Erlaubt den /warp set Befehl.
+     utilitys.warp.delete:
+          description: Erlaubt den /warp delete Befehl.
+     utilitys.warp.warp:
+          description: Erlaubt den /warp Befehl.
+          default: true
+     utilitys.home.*:
+          description: Gibt alle Berechtigungen fuer die Home bezogenen Kommandos.
+          default: true
+          children:
+               utilitys.home.set: true
+               utilitys.home.delete: true
+               utilitys.home.warp: true
+     utilitys.home.set:
+          description: Erlaubt den /home set Befehl.
+     utilitys.home.delete:
+          description: Erlaubt den /home delete Befehl.
+     utilitys.home.warp:
+          description: Erlaubt den /home Befehl.
+     utilitys.money.*:
+          description: Gibt alle Berechtigungen fuer die Money bezogenen Kommandos.
+          children:
+               utilitys.money.info: true
+               utilitys.money.set: true
+               utilitys.money.add: true
+               utilitys.money.remove: true
+               utilitys.money.reset: true
+     utilitys.money.info:
+          description: Erlaubt den /money Befehl.
+          default: true
+     utilitys.money.set:
+          description: Erlaubt den /money set Befehl.
+     utilitys.money.add:
+          description: Erlaubt den /money add Befehl.
+     utilitys.money.remove:
+          description: Erlaubt den /money remove Befehl.
+     utilitys.money.reset:
+          description: Erlaubt den /money reset Befehl.
+     utilitys.tp.*:
+          description: Gibt alle Berechtigungen fuer die TP bezogenen Befehle.
+          children:
+               utilitys.tpa: true
+               utilitys.tpaccept: true
+               utilitys.tpall: true
+     utilitys.tpa:
+          description: Erlaubt den /tpa Befehl.
+          default: true
+     utilitys.tpaccept:
+          description: Erlaubt den /tpaccept Befehl.
+          default: true
+     utilitys.tpall:
+          description: Erlaubt den /tpall Befehl.
+     utilitys.hat:
+          description: Erlaubt den /hat Befehl.
+          default: true
+     utilitys.nick:
+          description: Erlaubt den /nick Befehl.
+     utilitys.seat:
+          description: Erlaubt dem Spieler sich auf Treppen zusetzen.
+          default: true
+     utilitys.pets:
+          description: Erlaubt den /pets Befehl.

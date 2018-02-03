@@ -22,11 +22,11 @@ commands:
           usage: /back
      warp:
           description: Listet die /warp Befehle auf.
-          usage: /warp <[<set> <name>] [<delete> <name>] [<name>]>
+          usage: /warp [ set / delete ] <name>
      home:
-          usage: /home [ [<set> <name>] [<delete> <name>] [<name>] ]
+          usage: /home [ [ set / delete ] <name> ]
      money:
-          usage: /money [ [<set> <amount>] [<add> <amount>] [<remove> <amount>] [<reset>] ]
+          usage: /money [ reset / [ set / add / remove ] <amount> ]
      tpa:
           description: Schickt eine Teleportationsanfrage zu dem angegebenen Spieler.
           usage: /tpa <player>

@@ -41,7 +41,7 @@ commands:
           usage: /hat
      nick:
           description: Nickt dich.
-          usage: /nick <nickname>
+          usage: /nick [ <nickname> / reset ]
      pets:
           description: Macht das Pets-Inventar auf.
           usage: /pets
